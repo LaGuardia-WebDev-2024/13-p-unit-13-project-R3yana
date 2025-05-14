@@ -1,6 +1,7 @@
+
 #movie-result {
   background: rgb(244, 98, 181);
-  border: 5px solid black;
+  border: 5px solid purple;
   font-size: 24px;
   height: 160px;
   margin-top: 10px;
@@ -9,7 +10,7 @@
 
 #book-result {
   background: rgb(196, 159, 255);
-  border: 5px solid black;
+  border: 5px solid pink;
   font-size: 24px;
   height: 160px;
   margin-top: 10px;
@@ -18,5 +19,6 @@
 
 hr {
   height: 5px;
-  background-color: black;
+  background-color: blue;
+  
 }

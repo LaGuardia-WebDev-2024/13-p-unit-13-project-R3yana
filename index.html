@@ -18,7 +18,30 @@ Select ONE Additional Feature to Add
   <head>
     <meta charset="utf-8" />
     <title>Unit 13 Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
+    
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <style> 
+      h1{
+        font-family: "Pacifico", cursive;
+      }
+      
+      label{
+        font-family: "Great Vibes", cursive;}
+
+      
+      
+      html{
+      background-image: url( "https://miro.medium.com/v2/resize:fit:1400/1*fj8LYhFNZ-2DBcO0jcPTsg.jpeg")
+      }
+    </style>
   </head>
   <body>
     <h1>Quiz About [Me]</h1>
@@ -28,35 +51,55 @@ Select ONE Additional Feature to Add
       <label>
         🎥 What is my favorite movie?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">Let It shine</option>
+          <option value="movie2">Home</option>
+          <option value="movie3">Highschool Musical</option>
+          <option value="movie4">Lion King</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="movie-result">
+      <img
+           
+        src=" https://i.scdn.co/image/ab67616d0000b273c75b22e1ee13b340dbf8f29b"
+        width="160"
+      />
+    </div>
+
     <hr />
     <!-- Book Question -->
     <form id="book-form">
       <label>
         📖 What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">The hate you give</option>
+          <option value="book2">Love times infinity</option>
+          <option value="book3">Twisted love</option>
+          <option value="book4">I don't read</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
-    <div id="book-result"></div>
+    <div id="book-result">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYCvDxB_BnbffvOnaV4xXi8B_k-MVmsYd93g&s"
+        width="102"
+      />
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
     <script>
       //Movie Question jQuery Code
+
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
+
+        $("#movie-result").animate(
+          { width: "500px", marginLeft: "30px", borderWidth: "10px" },
+          1500
+        );
 
         var $answer = $("#movie-answer");
         var answer = $answer.val();
@@ -72,6 +115,10 @@ Select ONE Additional Feature to Add
       $("#book-form").on("submit", function (event) {
         event.preventDefault();
 
+        $("#book-result").animate(
+          { width: "500px", marginLeft: "30px", borderWidth: "10px" },
+          1500
+        );
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
